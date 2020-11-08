@@ -18,7 +18,7 @@ def generator(length=8):
         chars = int(input("How many characters do you want your password to be?: "))
         length = chars or length
     except ValueError:
-        pass
+        generator()
 
     random_password = random.choices(printable, k=length)
     random_password = ''.join(random_password)
